@@ -10,7 +10,7 @@ const person = {};
 
 let date = new Date();
 console.log(date.getDate());
-if (date >= 10) {
+if (date.getDate() <= 10) {
 	person.salary = console.log(`good salary`);
 } else {
 	person.salary = console.log(`bad salary`);
