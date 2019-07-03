@@ -1,36 +1,16 @@
-/**
- * Задача 6.
- *
- * Сделайте функцию `isEven()`, которая параметром принимает целое число и проверяет: чётное оно или нет.
- * Если чётное — функция возвращает `true`, если нечётное — `false`.
- *
- * Условия:
- * - Входной параметр должен обладать типом number;
- * - Для добавление нового элемента в конец массива используйте метод push.
- *
- * Заметки:
- * - Чётные числа могут делится на 2 без остатка.
- */
+/*# Задача 6
 
-// Решение
+Написать код который посчитает сумму всех элементов в массиве.
 
-/* не удалять 
-isEven(3); // false
-isEven(4); // true
-isEven('Content'); // Error: parameter type is not a Number
+Использовать встроенные методы массивов — нельзя.
 
-export { isEven };
-не удалять */
+```js
+const array = [1, 2, 3, 4];
+```*/
 
-let isEven = function(num) {
-	if (typeof num === 'number') {
-		if (num % 2 === 0) return console.log(true);
-		else return console.log(false);
- } else {
-  throw new Error('parameter type is not a Number');
- }
+const arr = [1,2,3,4];
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+	sum += arr[i];
 }
-
-isEven(3); // false
-isEven(4); // true
-isEven('Content'); // Error: parameter type is not a Number
+console.log(sum);

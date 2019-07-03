@@ -1,37 +1,25 @@
-/*
- * Задача 2.
- *
- * Создайте функцию `f`, которая возвращает сумму всех параметров.
- *
- *
- * Условия:
- * - Функция принимает любое количество параметров;
- * - Функция содержит проверку входных параметров на тип number.
- */
+/*####Задача 2
 
-// Решение
+Перепишите `if..else` с использованием нескольких операторов `?`. 
 
-/* не удалять
-f(1, 2, 3); // 6
-f(1, 1, 1, 1, 1, 1, 1, 1); // 8
-f(1, 2, 's', 4); // Error: all parameters should be a Number type
+Для читаемости — оформляйте код в несколько строк.
 
-export { f }; не удалять */
+```js
+var message;
 
-let f = function(num) {
-	if (typeof num !== 'number') {
-		throw new Error('all parameters should be a Number type');
- } else {
-		let sum = 0;
-		for (let i = 0; i < arguments.length; i++) {
-				console.log(typeof(arguments));
-				sum += arguments[i];
-		}
-  return console.log(sum);
- }
+if (login == 'Pitter') {
+  message = 'Hi';
+} else if (login == 'Owner') {
+  message = 'Hello';
+} else if (login == '') {
+  message = 'unknown';
+} else {
+  message = '';
 }
+```*/
+var login = 'Pitter';
+var message = (login == 'Pitter') ? 'Hi' :
+			(login == 'Owner') ? 'Hello' :
+			(login == '') ? 'unknown' : '';
 
-f(1,2,3); // 6
-f(1,1,1,1,1,1,1,1); // 8
-f(1,2,'s',4);
-f('1',2,'s',4);
+console.log(message);

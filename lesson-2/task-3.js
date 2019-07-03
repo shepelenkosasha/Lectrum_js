@@ -1,32 +1,34 @@
 /*
- * Задача 3.
- *
- * Создайте функцию `f`, которая отнимает от первого параметра второй и делит на третий.
- *
- * Условия:
- * - Функция принимает три параметра;
- * - Функция содержит проверку входного параметра на тип number.
- * - Функция содержит проверку входных параметров на тип number.
- */
+# Задача 3
 
-// Решение
+Перепишите код, заменив оператор `switch` на оператор `if..else`:
 
-/* не удалять 
-f(9, 3, 2); // 3
-f('s', 9, 3); // Error: all parameters type should be a Number
+```js
+const value = 'c';
 
-export { f };
-не удалять 
-```
+switch (value) {
+    case 'a':
+        console.log('a');
+        break;
+
+    case 'b':
+    case 'c':
+    case 'd':
+    case 'e':
+        console.log('others');
+        break;
+
+    default:
+        console.log('unknown');
+}
 */
 
-let f = function(num1, num2, num3) {
-	if (typeof num1 === 'number' && typeof num2 === 'number' && typeof num3 === 'number') {
-        return console.log((num1 - num2) / num3);
-    } else {
-        throw new Error('all parameters type should be a Number');
-    }
-}
+const value = 'c'
 
-f(9, 3, 2); // 3
-f('s', 9, 3); // Error: all parameters type should be a Number
+if (value == 'a') {
+	console.log('a');
+} else if (value == 'b' || value == 'c' || value == 'd' || value == 'e') {
+	console.log('others' );
+} else {
+	console.log( 'unknown' );
+}

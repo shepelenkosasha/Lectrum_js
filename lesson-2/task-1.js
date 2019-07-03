@@ -1,29 +1,22 @@
-/*/**
- * Задача 1.
- *
- * Создайте функцию `f`, которая возвращает куб числа.
- *
- * Условия:
- * - Функция принимает один параметр;
- * - Функция содержит проверку входного параметра на тип number.
- */
+/*# Задача 1
 
-// Решение
+Перепишите код, заменив оператор `if` на тернарный оператор `?`
 
-/* не удалять 
-f(2); // 8
-f('Content'); // Error: parameter is not a number type
+```js
+const a = 2;
+const b = 1;
+let result = null;
 
-export { f };
- не удалять */
-
-const f = num => {
-	if (typeof num === 'number') {
-        return console.log(num ** 3);
-    } else {
-        throw new Error('parameter is not a number type');
-    }
+if (a + b < 4) {
+    result = true;
+} else {
+    result = false;
 }
 
-f(2);
-f('Content');
+console.log(result);
+```*/
+const a = 2;
+const b = 1;
+let result = null;
+result = (a + b < 4) ? console.log(result = true) : console.log(result = false);
+

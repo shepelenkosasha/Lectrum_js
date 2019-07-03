@@ -1,36 +1,37 @@
-/**
+/*
  * Задача 2.
  *
- * Создайте объект `person` у которого будет 2 свойства: `rate` и `salary`.
- * Свойство `rate` можно читать и записывать, но нельзя удалять, а также это свойство не должно участвовать в перечислении всех свойств при переборе.
- * Свойство `salary` можно читать, но нельзя менять.
- * При чтении свойства `salary` возвращает результат умножения поля `rate` на текущее число в месяце.
- * Если rate не установлен — возвращаем число 0.
+ * Создайте функцию `f`, которая возвращает сумму всех параметров.
+ *
+ *
+ * Условия:
+ * - Функция принимает любое количество параметров;
+ * - Функция содержит проверку входных параметров на тип number.
  */
 
-const person = {};
-
-let date = new Date();
-// console.log(date);
-
 // Решение
-Object.defineProperty(person, 'rate', {
-    value: 0,
-    writable: true,
-    enumerable: false,
-});
 
-Object.defineProperty(person, 'salary', {
-    get() {
-    	// console.log(date.getDate());
-    	return console.log(person.rate * date.getDate());
-    },
-    configurable: false,
-});
+/* не удалять
+f(1, 2, 3); // 6
+f(1, 1, 1, 1, 1, 1, 1, 1); // 8
+f(1, 2, 's', 4); // Error: all parameters should be a Number type
 
-person.rate = 50;
+export { f }; не удалять */
 
-// Предположим что сегодня 10 января, в этом случае это свойство возвращает число 300
-person.salary;
+let f = function(num) {
+	if (typeof num !== 'number') {
+		throw new Error('all parameters should be a Number type');
+ } else {
+		let sum = 0;
+		for (let i = 0; i < arguments.length; i++) {
+				console.log(typeof(arguments));
+				sum += arguments[i];
+		}
+  return console.log(sum);
+ }
+}
 
-exports.person = person;
+f(1,2,3); // 6
+f(1,1,1,1,1,1,1,1); // 8
+f(1,2,'s',4);
+f('1',2,'s',4);
