@@ -13,6 +13,34 @@
 
 // Решение
 
+const requared = () => {throw new Error('required parameter')};
+
+const createArray = (value = requared(), quantity = requared()) => {
+
+    if (!Array.isArray(value) && typeof(value) !== 'number' && typeof(value) !== 'string' && typeof(value) !== 'object') {
+
+        throw new Error('invalid first value');
+
+    } else if (typeof(quantity) !== 'number') {
+
+        throw new Error('second parametr must be a number');
+
+    } else {
+
+        let array = [];
+
+        for (let i = 0; i < quantity; i++) {
+
+            array.push(value);
+
+        }
+
+        return array;
+        
+    }
+    
+};
+
 const result = createArray('x', 5);
 
 console.log(result); // [ x, x, x, x, x ]
