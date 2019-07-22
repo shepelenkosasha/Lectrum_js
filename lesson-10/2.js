@@ -19,6 +19,14 @@
 
 // Решение
 
+// const calculate = (...args) => {
+
+//     for (let i = 0; i < args.length; i++) {
+        
+//     };
+
+// };
+
 const result = calculate(
     () => {
         return 7;
