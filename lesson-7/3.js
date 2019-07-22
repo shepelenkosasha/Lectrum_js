@@ -13,9 +13,9 @@
 
 // Решение
 
-const requared = () => {throw new Error('required parameter')};
+const required = () => {throw new Error('required parameter')};
 
-const createArray = (value = requared(), quantity = requared()) => {
+const createArray = (value = required(), quantity = required()) => {
 
     if (!Array.isArray(value) && typeof(value) !== 'number' && typeof(value) !== 'string' && typeof(value) !== 'object') {
 
