@@ -19,13 +19,23 @@
 
 // Решение
 
-// const calculate = (...args) => {
+const calculate = (...args) => {
+    
+    const results = [];
 
-//     for (let i = 0; i < args.length; i++) {
-        
-//     };
+    args.forEach((arg, index) => {
 
-// };
+        const res = arg(results[index - 1]);
+
+        results.push(res);
+
+    }); 
+
+    const lastRes = results.slice(-1)[0];
+
+    return lastRes;
+
+};
 
 const result = calculate(
     () => {

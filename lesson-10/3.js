@@ -24,6 +24,24 @@
 
 // Решение
 
+const calculateAdvanced = (...args) => {
+    
+    const results = [];
+
+    args.forEach((arg, index) => {
+
+        const res = arg(results[index - 1]);
+
+        results.push(res);
+
+    }); 
+
+    const lastRes = results.slice(-1)[0];
+
+    return lastRes;
+
+};
+
 const result = calculateAdvanced(
     () => {},
     () => {
