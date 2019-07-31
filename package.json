@@ -1,0 +1,33 @@
+{
+  "name": "lectrum_js",
+  "version": "1.0.0",
+  "description": "study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint":"eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shepelenkosasha/Lectrum_js.git"
+  },
+  "keywords": [
+    "js",
+    "lectrum",
+    "study"
+  ],
+  "author": "Oleksandr Shepelenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shepelenkosasha/Lectrum_js/issues"
+  },
+  "homepage": "https://github.com/shepelenkosasha/Lectrum_js#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^17.1.1"
+  }
+}

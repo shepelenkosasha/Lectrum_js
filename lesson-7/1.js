@@ -17,17 +17,17 @@
  */
 
 const array = [
-	false,
-	'Привет.',
-	2,
-	'Здравствуй.',
-	[],
-	'Прощай.',
-	{
-		name: 'Уолтер',
-		surname: 'Уайт',
-	},
-	'Приветствую.',
+  false,
+  'Привет.',
+  2,
+  'Здравствуй.',
+  [],
+  'Прощай.',
+  {
+    name: 'Уолтер',
+    surname: 'Уайт',
+  },
+  'Приветствую.',
 ];
 
 
@@ -37,17 +37,17 @@ const required = () => {throw new Error('required parameter')};
 
 const inspect = (array = required()) => {
 
-	if (Array.isArray(array)) {
+  if (Array.isArray(array)) {
 
-		const filterArray = array.filter(item => typeof(item) === 'string');
+    const filterArray = array.filter(item => typeof(item) === 'string');
 
-		return filterArray.map(elem => elem.length);
+    return filterArray.map(elem => elem.length);
 
-	} else if (!Array.isArray(array)) {
+  } else if (!Array.isArray(array)) {
 
-		throw new Error ('argument must be an array');
+    throw new Error ('argument must be an array');
 
-	}
+  }
 
 };
 
