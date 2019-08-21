@@ -19,35 +19,43 @@
 
 const postpone = (start, end, delay) => {
 
-    if (typeof start === `number` && typeof end === `number` && typeof delay === `number`) {
+    const print = (item, value) => {
+        setTimeout (() => {
+            console.log(value);
+        }, delay * item);
+    };
 
-        const count = () => {
+    if (
+        typeof start === `number` && 
+        typeof end === `number` && 
+        typeof delay === `number`
+    ) {
 
-            if (start <= end) {
+        if (start <= end) {
 
-                for (let i = start; i <= end; i++) {
-
-                    console.log(i);
-    
-                }
-
-            } else if (start > end) {
-
-                for (let i = start; i >= end; i--) {
-
-                    console.log(i);
-    
-                }
+            for (let i = start; i <= end; i++) {
+                
+                print (i, i);
 
             }
 
-        };
+        } else if (start > end) {
 
-        setTimeout (count, delay);
+            let value = end;
+
+            for (let i = start; i >= end; i--) {
+
+                print (i, value++);
+
+            }
+
+        }
 
     } else throw new Error (`all parameter must be a number!`);
-
+    
 };
+
+
 
 postpone(1, 3, 1000);
 // 1
